@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script src="app.js"></script>
+        <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.css">
+    </head>
+    <body>
+        <h1>SIRH - Saisie Bancaire</h1>
+
+
+<!-- Search input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="searchinput">Rechercher un nom ou un prénom qui commence par:</label>
+  <div class="col-md-4">
+    <input id="searchinput" name="searchinput" type="search" placeholder="" class="form-control input-md">
+  </div>
+  
+  <!-- Button -->
+				<div class="form-group">
+  					<label class="col-md-4 control-label" for="Envoyer"></label>
+  						<div class="col-md-4">
+    					<a id="Chercher" href='<c:url value="/collaborateurs/editer"></c:url>' class="btn btn-primary">Chercher</a>
+  						</div>
+					</div>
+                </div>
+				
+
+
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="selectbasic">Filtrer par département:</label>
+  <div class="col-md-4">
+    <select id="selectbasic" name="selectbasic" class="form-control">
+      <option value="1">Touts</option>
+      <option value="2">Comptabilite</option>
+      <option value="3">Informatique</option>
+      <option value="4">Ressources Humaines</option>
+      <option value="5">Administratif</option>
+    </select>
+  </div>
+</div>
+	
+
+         <style>
+               table{
+                   border-collapse: separate; 
+                    border-spacing: 0;
+                   border: solid black 2px;
+                   text-align: center;
+                    border-radius: 15px;
+
+               } 
+
+            </style>
+<div>
+    <table ALIGN="LEFT">
+           
+
+        <thead>
+            <tr>
+            	<th  Width = "100px"> Matricule </th>
+                <th  Width = "100px"> Nom </th>
+                <th  Width = "100px"> Prenom </th> 
+            </tr>   
+        </thead>
+        <tbody id="body-collabs"> 	
+        </tbody>
+    </table>
+</div>
+
+        <input type="button" id="tst" value="OK" onclick="fnselect()" />
+    </body>
+
+</html>
